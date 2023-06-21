@@ -3,6 +3,10 @@
     // Disable collision:
     if(!collision_allow) exit;
     
+    // Semi solid:
+    if(argument_count > 2) semi_solid = argument[2];
+    else semi_solid = false;
+    
     var X1, X2, Y1, Y2;
     switch(mode) {
         case 0:

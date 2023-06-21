@@ -3,6 +3,10 @@
     // Disable collision:
     if(!collision_allow) exit;
     
+    // Semi solid:
+    if(argument_count > 2) semi_solid = argument[2];
+    else semi_solid = false;
+    
     if(collision_point(floor(x) + argument[0] * y_dir + argument[1] * x_dir, floor(y) + argument[1] * y_dir + argument[0] * -x_dir, par_solid, true, true)) {
         // Get the value from the object with what youre coliding:
         var solidCollisions = ds_list_create();
